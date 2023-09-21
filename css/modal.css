@@ -1,0 +1,98 @@
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    /* background: linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%); */
+
+    /* Background Image */
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+
+    width: 1200px;
+    height: 80%;
+    max-width: 80%;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-header .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    color: rgba(255, 200, 200, 1);
+  }
+  
+  .modal-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 1em 2em;
+
+  }
+
+  .modal-text {
+    color: white;
+    font-size: 1.8em;
+    padding: 2.5em 1.5em;
+
+    background-color: rgba(0.6, 1, 0.8, 0.5);
+    border-radius: 20px;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+

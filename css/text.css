@@ -1,0 +1,25 @@
+.massive_text {
+    font-size: 4em;
+}
+
+.big_text{
+    text-align: center;
+    font-size: 3em;
+}
+
+.medium_text {
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.info_text {
+    font-size: 1.5em;
+}
+
+.conclusion_big_text {
+    font-size: 2.5em;
+}
+
+.conclusion_medium_text {
+    font-size: 1.7em;
+}

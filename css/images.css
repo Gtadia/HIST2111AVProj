@@ -1,0 +1,135 @@
+/* Any class with "image" will be affected by this stylesheet */
+.image {
+    width: 100%; 
+    height: 100%;
+}
+
+.image-90 {
+    width: 90%;
+    height: 90%;
+}
+
+.image-fit-container {
+    width: 100%;
+    height: auto;
+}
+
+.image-fit-container-vertical {
+    height: 100%;
+    width: auto;
+}
+
+.image-background {
+    position: absolute;
+    height: 100%;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    filter: blur(5px) brightness(50%);
+    transition: transform 0.1s;
+}
+
+.hoverDimZoom:hover > .image-background{
+    aspect-ratio: 1;
+    pointer-events: none;
+    
+    /* -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+     */
+    -webkit-filter: blur(5px) brightness(80%);
+    filter: blur(5px) brightness(20%);
+  
+    transform: translate(-50%, -50%) scale(110%); 
+} 
+
+.img-plain {
+    max-width: 600px; 
+    opacity: 1;
+}
+
+.img-round {
+    max-width: 600px; 
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.img-border {
+    border: 1em solid #fff;
+    background-color: white;
+    border-radius: .25em;
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    margin: 2em auto;
+}
+
+.img_v1 {
+    border: 1em solid #fff;
+    border-radius: .25em;
+    /* box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2); */
+    margin: 2em auto;
+    max-width: 600px;
+    background: white;
+
+    -webkit-transform: translateY(4em) rotateZ(-5deg);
+    transform: translateY(4em) rotateZ(-5deg);
+}
+
+.image.img_v1.is-visible{
+    opacity: 1;
+    -webkit-transform: translateY(0) rotateZ(-2deg);
+            transform: translateY(0) rotateZ(-2deg);
+}
+
+.img_v2 {
+    border: 1em solid #fff;
+    background-color: white;
+    border-radius: .25em;
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    margin: 2em auto;
+
+    max-width: 700px;
+
+    -webkit-transform: translateY(4em);
+    transform: translateY(4em);
+}
+
+.image.img_v2.is-visible{
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+/* no borders and no rotateZ */
+.img_v3 {
+    border-radius: .25em;
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    margin: 2em auto;
+    max-width: 600px;
+
+    position: relative;
+    aspect-ratio: 1;
+
+    overflow: hidden;
+    border: none;
+}
+
+.image.img_v3.is-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+/* EVENTS => The images on the left */
+.image-events {
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.test {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    block-size: fit-content;
+}
